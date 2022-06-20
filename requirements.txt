@@ -1,4 +1,4 @@
-pytelegramotapi
+pytelegrambotapi
 pytube
 gunicorn
 flask
