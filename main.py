@@ -1,5 +1,4 @@
 import telebot
-from googletrans import Translator
 from telebot import types
 from pytube import YouTube
 
