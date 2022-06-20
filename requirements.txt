@@ -2,4 +2,3 @@ pytelegrambotapi
 pytube
 gunicorn
 flask
-os
