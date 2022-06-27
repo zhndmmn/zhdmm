@@ -32,16 +32,6 @@ def get_message():
       bot.process_new_updates([types.Update.de_json(flask.request.stream.read().decode("utf-8"))])
       return "!", 200
 
-@bot.message_handler(commands=['button'])
-def button_message(msg):
-    markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-    item1=types.KeyboardButton("Кнопка")
-    markup.add(item1)
-    bot.send_message(message.chat.id,'ну и зачем ты на это нажал',reply_markup=markup)
- @bot.message_handler(content_types='text')
-def message_reply(message):
-    if message.text=="Кнопка":
-        bot.send_message(message.chat.id,"мда кринж")
     
 @server.route('/', methods=["GET"])
 def index():
