@@ -38,6 +38,10 @@ def button_message(msg):
     item1=types.KeyboardButton("Кнопка")
     markup.add(item1)
     bot.send_message(message.chat.id,'ну и зачем ты на это нажал',reply_markup=markup)
+ @bot.message_handler(content_types='text')
+def message_reply(message):
+    if message.text=="Кнопка":
+        bot.send_message(message.chat.id,"мда кринж")
     
 @server.route('/', methods=["GET"])
 def index():
