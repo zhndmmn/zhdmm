@@ -33,7 +33,7 @@ def get_message():
       return "!", 200
 
 @bot.message_handler(commands=['button'])
-def button_message(message):
+def button_message(msg):
     markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1=types.KeyboardButton("Кнопка")
     markup.add(item1)
