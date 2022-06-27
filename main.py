@@ -22,5 +22,5 @@ def get_video(msg):
 
     print('done')
 
-bot.polling()
+bot.infinity_polling(True)
     
