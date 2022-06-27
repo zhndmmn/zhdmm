@@ -15,7 +15,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def start(msg):
-    bot.send_message(msg.chat.id, 'Отправьте ссылку на видео youtube')
+    bot.send_message(msg.chat.id, 'с тебя ссылка, с меня посылка')
 
 @bot.message_handler(content_types=['text'])
 def get_video(msg):
@@ -32,6 +32,13 @@ def get_message():
       bot.process_new_updates([types.Update.de_json(flask.request.stream.read().decode("utf-8"))])
       return "!", 200
 
+@bot.message_handler(commands=['button'])
+def button_message(message):
+    markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
+    item1=types.KeyboardButton("Кнопка")
+    markup.add(item1)
+    bot.send_message(message.chat.id,'ну и зачем ты на это нажал',reply_markup=markup)
+    
 @server.route('/', methods=["GET"])
 def index():
     print("hello webhook!")
