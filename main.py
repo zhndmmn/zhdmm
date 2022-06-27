@@ -9,7 +9,7 @@ import os
 
 server = flask.Flask(__name__)
 
-app_name = 'youtube-bot-downloader-1'
+app_name = 'youtube-bot-downloader'
 token = '5432678033:AAHXyWowK4GL1aeo1omm8M1L6RDtYTLi3tA'
 bot = telebot.TeleBot(token)
 
